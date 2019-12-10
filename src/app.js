@@ -4,8 +4,8 @@ const hbs=require('hbs')
 const geoCode=require('./utils/geocode')
 const forecast=require('./utils/forecast')
 
-const app=express()
-
+const app = express()
+const port = process.env.PORT || 3000
 
 //Define paths for Express confing
 const publicDirectoryPath=path.join(__dirname,'../public')
