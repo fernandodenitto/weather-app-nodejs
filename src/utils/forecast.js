@@ -11,7 +11,7 @@ const forecast=(latitude,longitude,callback)=>{
         }else if(body.error){
             callback("Non riesco ad identificare il luogo",undefined)
         }else{
-            const temperature=Math.round((body.hourly.data[0].temperature-32)*(5/9))+'C'
+            const temperature=Math.round((body.hourly.data[0].temperature-32)*(5/9))+' C'
             callback(undefined,body.daily.data[0].summary+' The temperature is '+temperature+' and the probability of precipitation is '+body.currently.precipProbability*100+'%')
         }
     })
